@@ -41,12 +41,23 @@ Algoritmo Gato
 					Escribir "     7||    8||    9"
 					Escribir " "
 					
+					numeroAzar <- 0;
+					minimo <- 1;
+					maximo <- 8;
+					
+					Repetir
+						numeroAzar <- AZAR(maximo+1);
+					Hasta Que numeroAzar >= minimo Y numeroAzar<=maximo
+					
 					si ~ final y turnos<9 Entonces
 						// carga
 						turnos = turnos +1
 						si turnos%2=1 Entonces
-							ficha <- "x"; Valor <- j; objetivo <- 1
+							ficha <- "x"; Valor <- 1; objetivo <- 1
 							Escribir "turno del jugador (X)"
+						SiNo
+							ficha<- "O"; Valor <- 2; objetivo <- 8
+							azar(8)
 						FinSi
 					FinSi
 					
@@ -105,7 +116,7 @@ Algoritmo Gato
 	
 	
 	
-	
+
 	
 
 FinAlgoritmo
